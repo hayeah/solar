@@ -110,7 +110,7 @@ func (c *Compiler) execSolc() (*rawCompilerOutput, error) {
 
 	var stderr bytes.Buffer
 
-	 fmt.Printf("exec: solc %v\n", args)
+	//fmt.Printf("exec: solc %v\n", args)
 	cmd := exec.Command("solc", args...)
 	cmd.Stderr = &stderr
 	stdout, err := cmd.Output()

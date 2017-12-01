@@ -41,7 +41,7 @@ func init() {
 
 		fmt.Printf("   \033[36mdeploy\033[0m %s => %s\n", *sourceFilePath, *name)
 
-		fmt.Printf("%#v", deployer)
+		//fmt.Printf("%#v", deployer)
 		err = deployer.CreateContract(contract, []byte(*jsonParams), *name, *force)
 		if err != nil {
 			fmt.Println("\u2757\ufe0f \033[36mdeploy\033[0m", err)
@@ -53,7 +53,7 @@ func init() {
 			// Force local chain to generate a block immediately.
 			allowFastConfirm := *solarEnv == "development" || *solarEnv == "test"
 			if *noFastConfirm == false && allowFastConfirm {
-				fmt.Println("call deployer.Mine")
+				//fmt.Println("call deployer.Mine")
 				err = deployer.Mine()
 				if err != nil {
 					log.Println(err)
