@@ -7,9 +7,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/pkg/errors"
 	"github.com/hayeah/solar/contract"
-	"fmt"
+	"github.com/pkg/errors"
 )
 
 type rawCompilerOutput struct {
